@@ -124,7 +124,7 @@ public class ListTester {
 		// Print out two lists for review, and a percentage of working methods
 		print("Given:    "+list.toString(), true);
 		print("Expected: "+expected, true);
-		print("Completion: "+100*.2*correct+"%", true);
+		print("Completion: "+100 * correct/5+"%", true);
 	}
 
 	/**

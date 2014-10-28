@@ -5,50 +5,49 @@ package edu.emu.jzs2255;
  *
  */
 public class Node {
-	// reference/pointer to the next node in the link chain
-	// or null if there is no other
-	private Node next;
-	// string carried by the node
-	private String value;
+	
+	private Node nextNode; // Reference to the next Node in the list
+	private Object data; // Data kept by the Node (can be String, Integer, Double, or any custom Object that you make)
 	
 	/**
 	 * Constructor method
-	 * @param Initial String
+	 * Initializes variables appropriately
+	 * @param newObject 	New Object for the Node to start with.
 	 */
-	public Node(String newValue){
-		next = null;
-		value = newValue;
+	public Node(Object newObject){
+		data = newObject;
+		nextNode = null;
 	}
 	
 	/**
-	 * Returns the value of the Node
-	 * @return String stored in the node
+	 * Returns the data from the Node
+	 * @return 		Object stored in the node
 	 */
-	public String getValue(){
-		return value;
+	public Object getObject(){
+		return data;
 	}
 	
 	/**
-	 * Sets the value of the Node
-	 * @param New String
+	 * Sets the Object of the Node
+	 * @param 	newData	New Object for the Node to store.
 	 */
-	public void setValue(String newValue){
-		value = newValue;
+	public void setObject(Object newData){
+		data = newData;
 	}
 	
 	/**
 	 * Returns the next Node in the list
-	 * @return Next Node in the linked list
+	 * @return 		Next Node in the list
 	 */
 	public Node getNext(){
-		return next;
+		return nextNode;
 	}
 	
 	/**
 	 * Sets the next Node in the list
-	 * @param New next Node in the linked list
+	 * @param 		New Node to assign as the following Node
 	 */
 	public void setNext(Node newNext){
-		next = newNext;
+		nextNode = newNext;
 	}
 }
